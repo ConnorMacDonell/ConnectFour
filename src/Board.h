@@ -8,7 +8,7 @@
 #include <vector>
 #include <iostream>
 #include <utility>
-#include <stdexcept>
+#include <stack>
 
 #ifndef BOARD_H_
 #define BOARD_H_
@@ -20,8 +20,14 @@ public:
 	void insertPiece(int col, piece color);
 	void display();
 	connectFourBoard();
+	bool isWon(int col);
+	piece getSlot(int row, int col);
 private:
 	std::vector<std::vector<piece> > board;
+	bool checkAdjacent(int row, int col, piece color);
+	bool checkBelow(int row, int col, piece color);
+	bool checkLD(int row, int col, piece color);
+	bool checkRD(int row, int col, piece color);
 };
 
 

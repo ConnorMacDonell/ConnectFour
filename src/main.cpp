@@ -8,18 +8,12 @@
 
 #include <iostream>
 
-#include "Board.h"
+#include "ConnectFour.h"
 
 int main() {
-	connectFourBoard playSpace;
-	playSpace.insertPiece(1, RED);
-	playSpace.insertPiece(1, RED);
-	playSpace.insertPiece(1, BLACK);
-	playSpace.insertPiece(2, BLACK);
-	playSpace.insertPiece(5, RED);
-	playSpace.insertPiece(6, RED);
-	playSpace.insertPiece(2, BLACK);
-	playSpace.display();
+	connectFourGame game;
+	game.playGame();
+
 
 	return 0;
 }
